@@ -27,7 +27,7 @@ O portal apresenta uma estimativa de custo antes da implantação. A capacidade 
 
 ## Rede e conectividade
 
-O acesso pode ocorrer por endpoint público, regras de firewall, integração com rede virtual ou endpoint privado. Liberar todo o tráfego público não é uma boa prática. O ideal é permitir apenas origens necessárias ou manter a comunicação em rede privada.
+O acesso pode ocorrer por endpoint público, regras de firewall, integração com rede virtual ou endpoint privado. Liberar todo o tráfego público não é uma boa prática. O ideal é permitir apenas origens necessárias ou manter a comunicação em rede privada. A criação de um Private Endpoint não desativa automaticamente o endpoint público; quando a intenção for acesso exclusivamente privado, também é necessário habilitar a opção **Deny public network access**.
 
 Após a implantação, a aplicação usa o nome do servidor, o nome do banco, o método de autenticação e uma conexão criptografada. Segredos de conexão não devem ficar gravados no código; podem ser armazenados no Azure Key Vault ou substituídos por autenticação baseada em identidade quando compatível.
 
@@ -55,4 +55,3 @@ Escala, alta disponibilidade, replicação geográfica e redundância devem segu
 - A configuração de rede deve seguir o menor nível de exposição possível.
 - Credenciais não devem ser armazenadas no código ou em arquivos versionados.
 - Backup só é confiável quando a estratégia de restauração também é conhecida e testada.
-

@@ -27,7 +27,7 @@ Esses componentes devem ser selecionados a partir dos requisitos da carga, evita
 
 ## Disponibilidade, escala e recuperação
 
-Alta disponibilidade reduz interrupções dentro do ambiente operacional. O uso de múltiplas instâncias, zonas, balanceamento e serviços gerenciados elimina pontos únicos de falha. Escala vertical aumenta a capacidade de um recurso; escala horizontal adiciona instâncias e costuma oferecer mais elasticidade e resiliência.
+Alta disponibilidade reduz interrupções dentro do ambiente operacional. O uso de múltiplas instâncias, zonas, balanceamento e serviços gerenciados ajuda a reduzir ou eliminar pontos únicos de falha quando dependências, distribuição, replicação e failover são projetados e testados corretamente. Escala vertical aumenta a capacidade de um recurso; escala horizontal adiciona instâncias e costuma oferecer mais elasticidade e resiliência.
 
 Recuperação de desastre trata falhas maiores e pode exigir replicação para outra região. O desenho deve considerar:
 
