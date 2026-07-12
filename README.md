@@ -1,5 +1,7 @@
 # Resumos - Formação Microsoft Azure (DIO)
 
+[![Validar documentação](https://github.com/GabrielArcanjo777/dio-azure-resumos/actions/workflows/docs.yml/badge.svg)](https://github.com/GabrielArcanjo777/dio-azure-resumos/actions/workflows/docs.yml)
+
 Repositório de resumos das aulas do bootcamp da DIO sobre Microsoft Azure, organizado por tema para facilitar consultas e futuras atualizações.
 
 ## Índice
@@ -18,3 +20,13 @@ Repositório de resumos das aulas do bootcamp da DIO sobre Microsoft Azure, orga
 2. Adicione um arquivo `resumo.md` com título e seções sobre os principais conceitos.
 3. Mantenha `Insights/Aprendizados` como a última seção do resumo.
 4. Inclua o novo tema na tabela do índice.
+
+## Validação local
+
+Antes de enviar uma alteração, execute:
+
+```bash
+python scripts/validate_docs.py
+```
+
+O mesmo teste é executado pelo GitHub Actions em pushes para `main` e em pull requests.
