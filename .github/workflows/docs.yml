@@ -25,3 +25,6 @@ jobs:
 
       - name: Validar documentação
         run: python scripts/validate_docs.py
+
+      - name: Testar o validador
+        run: python -m unittest discover -s tests -v
