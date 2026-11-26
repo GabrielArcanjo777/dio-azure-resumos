@@ -26,9 +26,11 @@ def validate_summary(path: Path) -> list[str]:
     errors: list[str] = []
     relative = path.relative_to(ROOT).as_posix()
     content = path.read_text(encoding="utf-8")
+    # Comentários "# ..." dentro de blocos de código não são títulos.
+    prose = re.sub(r"^```.*?^```", "", content, flags=re.MULTILINE | re.DOTALL)
 
-    h1_headings = re.findall(r"^#\s+(.+?)\s*$", content, flags=re.MULTILINE)
-    h2_headings = re.findall(r"^##\s+(.+?)\s*$", content, flags=re.MULTILINE)
+    h1_headings = re.findall(r"^#\s+(.+?)\s*$", prose, flags=re.MULTILINE)
+    h2_headings = re.findall(r"^##\s+(.+?)\s*$", prose, flags=re.MULTILINE)
 
     if len(h1_headings) != 1:
         errors.append(f"{relative}: deve conter exatamente um título H1")
